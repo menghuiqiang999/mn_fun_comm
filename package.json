@@ -1,0 +1,29 @@
+{
+  "name": "mn_fun_comm",
+  "version": "1.2.1",
+  "description": "The common function of moonlight",
+  "main": "com.js",
+  "dependencies": {
+    "ioredis": "^3.2.2",
+    "mongodb": "^3.0.8",
+    "moonlight_function_errplace": "^1.0.0",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "moonlight_function_common"
+  ],
+  "author": "moonlight",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/menghuiqiang999/mn_fun_comm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/menghuiqiang999/mn_fun_comm/issues"
+  },
+  "homepage": "https://github.com/menghuiqiang999/mn_fun_comm#readme"
+}
