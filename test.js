@@ -14,11 +14,12 @@ var com=require('./com');
 var comm = com.common
 var getRandChar = comm.getRandChar;
 var len = getRandChar(16);
-console.log (pageName, ':len:',len);
+//console.log (pageName, ':len:',len);
 
 
 // ---------------------------------------------------------------------------------------------------------------------
 //Test crypto
+/*
 var crypto=com.crypto;
 var s = 'menghuiqiang';
 
@@ -47,7 +48,7 @@ xml2json(xml,function (err,jsonCallback) {
 
 });
 
-
+*/
 
 /*
 try{
