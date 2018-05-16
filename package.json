@@ -1,6 +1,6 @@
 {
   "name": "mn_fun_comm",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "The common function of moonlight",
   "main": "com.js",
   "dependencies": {

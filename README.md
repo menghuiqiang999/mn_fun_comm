@@ -134,9 +134,11 @@ Such as:
 ##Xml
 
 ###xml2json
-@param xml - xml from corpweixn
-* @return xmljson -  such as {"xml":{"ToUserName":["wwf54870d97f9ee496"],"AgentID":["1000004"]}}
-* @example
+param xml - xml from corpweixn
+
+return xmljson -  such as {"xml":{"ToUserName":["wwf54870d97f9ee496"],"AgentID":["1000004"]}}
+
+example
 
     xml2json(xml,funciotn(err,jsonCallback){
        ......

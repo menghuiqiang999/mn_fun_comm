@@ -16,6 +16,12 @@ var getRandChar = comm.getRandChar;
 var len = getRandChar(16);
 //console.log (pageName, ':len:',len);
 
+var getNonce =comm.getNonce;
+var nonce= getNonce(10);
+console.log(page_name,':nonce:',nonce);
+var timestamp = comm.getTimestamp();
+
+console.log(page_name,':timestamp:',timestamp);
 
 // ---------------------------------------------------------------------------------------------------------------------
 //Test crypto
