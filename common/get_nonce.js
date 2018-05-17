@@ -4,9 +4,16 @@
 'use strict';
 var pageName = 'get_nonce';
 
+
+/**
+ *
+ * @param len
+ * @returns {number} - ruturn a rand number, the number of digits is len
+ * @example
+ * var nonce = getNonce(10);
+ */
 var getNonce = function (len) {
     var rand = Math.random();
-    console.log(pageName,':rand:',rand);
     while (rand < 1) {
         rand = rand * 10;
     };
@@ -15,7 +22,5 @@ var getNonce = function (len) {
     };
     rand=Math.floor(rand);
     return rand;
-
 };
-
 module.exports = getNonce;

@@ -23,6 +23,4 @@ var getRandChar = function (len) {
     };
 };
 
-
-
 module.exports = getRandChar;

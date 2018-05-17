@@ -1,12 +1,11 @@
 {
   "name": "mn_fun_comm",
-  "version": "1.2.4",
+  "version": "1.2.9",
   "description": "The common function of moonlight",
   "main": "com.js",
   "dependencies": {
     "ioredis": "^3.2.2",
     "mongodb": "^3.0.8",
-    "moonlight_function_errplace": "^1.0.0",
     "xml2js": "^0.4.19"
   },
   "devDependencies": {},
