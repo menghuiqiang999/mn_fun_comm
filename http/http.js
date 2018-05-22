@@ -6,10 +6,9 @@ var pageName="https";
 
 var file = require ('./file');
 exports.file = file;
-/*
-var get = require('./lib/get');
+
+var get = require('./get');
 exports.get = get;
 
-var post = require('./lib/post');
+var post = require('./post');
 exports.post = post;
-*/
