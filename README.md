@@ -6,7 +6,7 @@
 
 #Quick Start
 ##install
-    npm install moonlight_function_common
+    npm install mn_fun_comm
 ##Basic Usage
 
 ##common
@@ -248,6 +248,19 @@ example
         ......
     });
 
+###postBuffer
+param host - Such as  qyapi.weixin.qq.com
+
+param uri - Such as /cgi-bin/uer/get?access_token=ACCESS_TOKEN ......
+
+param content
+
+param data_callback
+
+example
+    post (host,uri,content,function(err,result){
+          ......
+    });
 
 
 ##Mongodb
