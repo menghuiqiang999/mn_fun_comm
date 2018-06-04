@@ -1,6 +1,6 @@
 {
   "name": "mn_fun_comm",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "The common function of moonlight",
   "main": "com.js",
   "dependencies": {
@@ -18,7 +18,7 @@
     "moonlight_function_common"
   ],
   "author": "moonlight",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/menghuiqiang999/mn_fun_comm.git"
