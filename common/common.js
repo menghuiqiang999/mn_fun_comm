@@ -4,6 +4,9 @@
 'use strict';
 var pageName = 'common';
 
+
+
+
 var getNonce = require ('./get_nonce');
 exports.getNonce = getNonce;
 
@@ -12,6 +15,10 @@ exports.getRandChar = getRandChar;
 
 var getTimestamp = require ('./get_timestamp');
 exports.getTimestamp =getTimestamp;
+
+
+exports.String = require('./String');
+
 
 
 var translateOptionsCallback = require ('./translate_options_callback');

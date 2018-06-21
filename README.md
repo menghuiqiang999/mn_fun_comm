@@ -301,23 +301,74 @@ example
 
 ##Mongodb
 
-###Method insert
+###Method Class Insert
 
-    var com=require('moonlight_function_common');
-    var mongodb = com.mongodb;
-    mongodb.insert (document)  {
-          ......
-     }
-     mongodb.insert (document , options)  {
-          ......
-     }
-     mongodb.insert (document , function (err,result)  {
-          ......
-     }
-     mongodb.insert (document, options , function (err,result)  {
-         ......
-    }
+options 为数据库的参数，如下样例：
 
+    const options = {
+        url :  "mongodb://localhost:27017",
+        dbName : "booklist",
+        collectionName : "booklist"
+    };
+
+document 为要插入的文档，如下样例：
+
+    const  document = {
+        corpId : "123456789" ,
+        user : "menghuiqiang2" ,
+        content:content ,
+        trimContent: trim(content) ,
+        timestamp :  Date.now()
+    };
+
+    const Insert = com.mongo.Insert;
+    const insert =  new Insert(document,options);
+
+    insert.colMethod(insert,(err,result) => {
+       if (err) {
+           conssole.log(err);
+       }
+       console.log(result);
+    });
+###Method Class Find
+
+whereStr为查询条件，样例如下：
+
+    const whereStr= {trimContent:/孟会强/};
+
+    const Find = com.mongo.Find;
+    const find = new Find(whereStr,options);
+
+    find.colMethod(find,(err,result) => {
+        if (err) {
+            conssole.log(err);
+        }
+        console.log(result);
+    });
+
+###Method Class FindSort
+
+sortStr为排序条件，样例如下：
+
+    const sortStr = {"timestamp" : -1};
+    const findSort = new com.mongo.FindSort(whereStr,sortStr,options);
+    findSort.colMethod(findSort,(err,result) => {
+        if (err) {
+            conssole.log(err);
+        }
+        console.log(result);
+    });
+
+###Method Class Aggregation
+
+    const aggregationArray = [{$sort:{user:-1,timestamp:1}},{$group:{_id:"$user",content:{$first:"$content"},timestamp:{$first:"$timestamp"}}}];
+    const aggregationItems = new com.mongo.AggregateItems(aggregationArray,options);
+    aggregationItems.colMethod(aggregationItems,(err,result) => {
+        if (err) {
+            conssole.log(err);
+        }
+        console.log(result);
+    });
 ##Redis
 
 
@@ -339,6 +390,35 @@ Such as:
     redis.getkey(key,function(err,result){
        ......
     });
+
+##time
+###format_time
+####formatDate
+param timeMs - Input mileSeconds from 1970-1-1 00:00:00
+returns {string}- Such as :2018-06-21
+example
+
+   const date = formatDate(timeMs);
+
+date 输出 :2018-06-21
+
+###formatTime
+param timeMs - Input mileSeconds from 1970-1-1 00:00:00
+returns {string}- Such as :2018-06-21 12:34:05
+example
+
+   const date = formatTime(timeMs);
+
+###Timestamp
+返回当前时间的秒数或毫秒数
+example
+
+    const timestamp = new Timestamp ;
+
+    const timeMs = timestamp.toMs;   //返回毫秒 mileSeconds from 1970-1-1 00:00:00
+    const time = timestamp.toSecond ; //返回秒数 Seconds from 1970-1-1 00:00:00
+
+
 
 ##Xml
 
